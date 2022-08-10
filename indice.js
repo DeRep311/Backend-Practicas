@@ -3,30 +3,30 @@ const Contenedor =require('./contenedor.js');
 const produ1 =    {
     "title": "Cartuchera",
     "price": 250,
-    "id": 1
+    
   }
  const produ2 =    {
     "title": "Regla elastica",
     "price": 50,
-    "id": 2
+    
 }
   
   const produ3 =   {
     "title": "Cartulina",
     "price": 150,
-    "id": 3
+   
   }
 
   const produ4 = {
     "title": "mousepad",
     "price": 1500,
-    "id": 4
+    
   }
   async function main(){
     const contenedor = new Contenedor('./productos.txt');
 
     console.log("Elimino todo")
-    objeto =  await contenedor.deleteAll();
+    let objeto =  await contenedor.deleteAll();
 
     console.log("Muestro productos");
     let productos =  await contenedor.getAll();
@@ -39,8 +39,8 @@ const produ1 =    {
     
 
     console.log("Muestro Productos")
-    let objeto =  await contenedor.getAll();
-    console.log(objeto)
+    let objeto1 =  await contenedor.getAll();
+    console.log(objeto1)
    
 
      console.log("busco la id")
