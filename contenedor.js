@@ -63,6 +63,7 @@ class Contenedor {
 
         } catch (error) {
             console.log(`Error al buscar la informacion ${error}`);
+            
            return []
         }
     }
@@ -92,5 +93,5 @@ class Contenedor {
         }
     }
 }
-const contenedor = new Contenedor('./productos.txt');
+
 module.exports = Contenedor

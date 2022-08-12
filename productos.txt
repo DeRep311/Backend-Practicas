@@ -1,0 +1,21 @@
+[
+    {
+        "title": "Cartuchera",
+        "price": 250,
+        "Id": 1,
+    },
+
+    {
+        "title": "Regla elastica",
+        "price": 50,
+        "Id": 2,
+    },
+    {
+    "title": "Cartulina",
+    "price": 150,
+    "Id": 3,
+   
+  }
+
+
+]
