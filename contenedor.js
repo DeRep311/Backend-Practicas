@@ -20,7 +20,7 @@ class Contenedor {
     
           } else {
     
-            newId = objet[objet.length - 1]+ 1;
+            newId = objet[objet.length - 1].id+ 1;
     
           }
     
@@ -56,10 +56,10 @@ class Contenedor {
 
     async getAll() {
         try {
-           let objetos = await fs.readFile(this.ruta, 'utf-8');
+           let objetos =JSON.parse(await fs.readFile(this.ruta, 'utf-8'));
 
-           let objetoss = JSON.stringify(objetos,null,2);
-            return objetoss;
+           
+            return objetos;
 
         } catch (error) {
             console.log(`Error al buscar la informacion ${error}`);
@@ -76,9 +76,10 @@ class Contenedor {
         const nuevoObjeto = objetos.filter(elemento => elemento.id !== id);
         if(nuevoObjeto.length === objetos.length){
             throw new Error('no se encontro el id')
-        }else{
+        }
       
-            await fs.writeFile(this.ruta, JSON.stringify(nuevoObjeto,null,2));}
+            await fs.writeFile(this.ruta, JSON.stringify(nuevoObjeto,null,2));
+        
         } catch (error) {
             console.log(`eliminar ${error}`);
         }
